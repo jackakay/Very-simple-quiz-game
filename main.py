@@ -46,10 +46,14 @@ def game():
             else:
                 print("Incorrect!")
         elif operation == 3:
+            
             num1 = random.randint(1,1000)
             num2 = random.randint(1,40)
+            while num1 % num2 != 0:
+                num1 = random.randint(1,1000)
+                num2 = random.randint(1,40)
             if num1 % num2 == 0:
-                result = num1 * num2
+                result = num1 / num2
                 answer = int(input("What is the answer to " + str(num1) + " / " + str(num2) + "?"))
                 if answer == result:
                     score += 1
